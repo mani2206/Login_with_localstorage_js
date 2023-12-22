@@ -1,0 +1,31 @@
+@import "./abstracts/variables";
+@import "./mixins/breakpoints";
+@import "./abstracts/common";
+@import "./abstracts/button";
+@import "./includes/header";
+@import "./includes/footer";
+
+// Main style start
+.main_content {
+    background-color: burlywood;
+    .main_content_header {
+        font-family: $font-2;
+    }
+    .form {
+        font-family: $font-1;
+        background-color: $bg-color;
+        padding: 20px;
+        border-radius: 20px;
+        box-shadow: 3px 3px 30px 10px $bg-color1;
+        .main_content_header {
+            font-size: 50px;
+        }
+        @include media-min-xl {
+            width: 60%;
+            margin: 0 auto;
+        }
+    }
+    @include media-min-xl {
+        height: 100vh;
+    }
+}
